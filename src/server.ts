@@ -1,6 +1,7 @@
 import express, { Request, Response } from "express";
 import { sequelize } from "./db/connection.js";
 import docsRouter from "./docs.js";
+import booksRoutes from "./routes/bookRoutes.js";
 
 const app = express();
 const PORT = 3000;
@@ -16,8 +17,7 @@ app.get("/", (req: Request, res: Response) => {
 app.use("/docs", docsRouter);
 
 // 👇 Acá vas a montar tus routers:
-// app.use("/authors", authorsRoutes);
-// app.use("/books", booksRoutes);
+app.use("/books", booksRoutes);
 // app.use("/loans", loansRoutes);
 
 // Ya hecho. Si un pedido falla con un error que nadie atrapó (por ejemplo, un error

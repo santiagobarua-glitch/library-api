@@ -10,12 +10,14 @@ export interface NewBook {
   title: string;
   year: number;
   author_id: number;
+  available?: boolean;
 }
 
 export interface UpdateBook {
   title?: string;
   year?: number;
   author_id?: number;
+  available?: boolean;
 }
 
 export interface BookFilters {
