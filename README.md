@@ -16,6 +16,14 @@ Proyecto base para la clase **De la base de datos a la API**. Trae la base de da
 
 ## Instalar y correr
 
+Antes de iniciar el servidor, crea `library-api/.env` con un secreto JWT aleatorio de al menos 32 caracteres. Por ejemplo, en macOS puedes generarlo con `openssl rand -base64 32`:
+
+```env
+JWT_SECRET=pega_aqui_el_secreto_generado
+```
+
+No compartas ni subas ese archivo al repositorio. Después inicia el servidor:
+
 ```bash
 npm install
 npm run seed     # crea las tablas en la base `library` y carga datos de ejemplo
